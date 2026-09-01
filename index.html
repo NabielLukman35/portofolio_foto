@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Nabiel Lukman — Portofolio Fotografi Profesional</title>
+    
+    <meta name="description" content="Mengabadikan Pencapaian, Petualangan, dan Aksi Dinamis Anda. Jasa foto wisuda, selebrasi pasca sidang, tour & travel, serta dokumentasi olahraga di Yogyakarta & sekitarnya.">
+    <meta name="author" content="Nabiel Lukman">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --heading-tight: -0.035em;
+            --body-spacing: 0.01em;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-feature-settings: "cv11", "ss01";
+            letter-spacing: var(--body-spacing);
+            line-height: 1.7;
+            text-rendering: optimizeLegibility;
+        }
+
+        main section[id] {
+            scroll-margin-top: 5.5rem;
+        }
+
+        h1, h2, h3, h4, .font-serif {
+            letter-spacing: var(--heading-tight);
+            line-height: 1.15;
+        }
+
+        .glass-header {
+            background: rgba(12, 10, 9, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .gallery-item {
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, box-shadow 0.35s ease;
+            will-change: transform, opacity;
+        }
+
+        .gallery-item:hover .overlay-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .overlay-info {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(12px);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0c0a09;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #292524;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #44403c;
+        }
+    </style>
+</head>
+<body class="bg-stone-950 text-stone-200 font-sans antialiased selection:bg-amber-500 selection:text-stone-950">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-40 border-b border-stone-800/80 glass-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-20 sm:h-24 flex items-center justify-between gap-6 sm:gap-10">
+            
+            <!-- Logo Brand -->
+            <a href="#hero" class="flex flex-col group shrink-0 py-1">
+                <span id="brandName" class="font-serif text-xl sm:text-2xl lg:text-3xl font-bold tracking-wider text-white group-hover:text-amber-400 transition-colors whitespace-nowrap">
+                    Nabiel Lukman
+                </span>
+                <span class="text-[9px] sm:text-[10px] tracking-[0.25em] text-stone-400 uppercase font-medium mt-0.5">
+                    Photography & Direction
+                </span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-7 xl:gap-10 text-sm font-medium text-stone-300">
+                <a href="#hero" class="hover:text-amber-400 transition-colors py-2">Beranda</a>
+                <a href="#portfolio" class="hover:text-amber-400 transition-colors py-2">Portofolio</a>
+                <a href="#about" class="hover:text-amber-400 transition-colors py-2">Tentang Saya</a>
+                <a href="#services" class="hover:text-amber-400 transition-colors py-2">Layanan & Tarif</a>
+                <a href="#schedule" class="hover:text-amber-400 transition-colors py-2">Jadwal Sesi</a>
+                <a href="#testimonials" class="hover:text-amber-400 transition-colors py-2">Testimoni</a>
+            </nav>
+
+            <!-- CTA Button & Mobile Toggle -->
+            <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+                <a href="#booking" class="hidden sm:inline-flex items-center justify-center px-6 py-3 rounded-full text-xs font-bold tracking-wider uppercase bg-emerald-500 hover:bg-emerald-400 text-stone-950 transition-all duration-300 transform hover:scale-[1.02] shadow-lg shadow-emerald-500/10 whitespace-nowrap">
+                    <i class="fa-brands fa-whatsapp text-sm mr-2"></i> Booking Sesi
+                </a>
+                <button id="mobileMenuBtn" class="lg:hidden text-stone-300 hover:text-white p-2.5 text-xl focus:outline-none rounded-xl hover:bg-stone-900 transition-colors" aria-label="Buka Menu">
+                    <i class="fa-solid fa-bars" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-stone-800 bg-stone-900/98 backdrop-blur-xl px-6 py-8 space-y-5 shadow-2xl">
+            <a href="#hero" class="mobile-link block text-base font-medium text-stone-300 hover:text-amber-400 py-1">Beranda</a>
+            <a href="#portfolio" class="mobile-link block text-base font-medium text-stone-300 hover:text-amber-400 py-1">Portofolio</a>
+            <a href="#about" class="mobile-link block text-base font-medium text-stone-300 hover:text-amber-400 py-1">Tentang Saya</a>
+            <a href="#services" class="mobile-link block text-base font-medium text-stone-300 hover:text-amber-400 py-1">Layanan & Tarif</a>
+            <a href="#schedule" class="mobile-link block text-base font-medium text-stone-300 hover:text-amber-400 py-1">Jadwal Sesi</a>
+            <a href="#testimonials" class="mobile-link block text-base font-medium text-stone-300 hover:text-amber-400 py-1">Testimoni</a>
+            <a href="#booking" class="mobile-link block text-base font-semibold text-emerald-400 pt-3 border-t border-stone-800">
+                <i class="fa-brands fa-whatsapp mr-2"></i> Chat Booking WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-[92vh] sm:min-h-screen flex items-center justify-center pt-32 sm:pt-40 pb-20 sm:pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <!-- Background Image with Automatic Fallback -->
+            <div class="absolute inset-0 z-0 bg-stone-900">
+                <img id="heroBgImage" 
+                     src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 1000'%3E%3Crect width='1600' height='1000' fill='%230f172a'/%3E%3Crect x='220' y='180' width='1160' height='620' rx='42' fill='%23172439'/%3E%3Cg opacity='0.22' stroke='%23f59e0b' stroke-width='2'%3E%3Crect x='350' y='260' width='630' height='420' rx='18'/%3E%3Crect x='430' y='300' width='470' height='340' rx='12'/%3E%3Crect x='500' y='350' width='330' height='240' rx='10'/%3E%3C/g%3E%3Ctext x='800' y='420' text-anchor='middle' font-size='84' font-family='Arial, sans-serif' font-weight='700' fill='%23ffffff'%3EPHOTO%3C/text%3E%3Ctext x='800' y='532' text-anchor='middle' font-size='84' font-family='Arial, sans-serif' font-weight='700' fill='%23f59e0b'%3ESTORY%3C/text%3E%3Ctext x='800' y='650' text-anchor='middle' font-size='30' font-family='Arial, sans-serif' font-weight='700' fill='%23e2e8f0'%3ENabiel Lukman%3C/text%3E%3C/svg%3E" 
+                     alt="Photographer In Action" 
+                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1920&auto=format&fit=crop';"
+                     class="w-full h-full object-cover object-center filter brightness-[0.32] scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/60 to-transparent"></div>
+            </div>
+
+            <!-- Hero Main Content -->
+            <div class="relative z-10 max-w-5xl mx-auto text-center space-y-8 sm:space-y-10">
+                <div class="inline-flex items-center gap-2.5 px-4 sm:px-5 py-2 rounded-full bg-stone-900/80 border border-stone-700/60 text-emerald-400 text-xs tracking-wider uppercase font-semibold backdrop-blur-md">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    Fast Response • Booking Langsung via WhatsApp
+                </div>
+
+                <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white tracking-tight leading-[1.2] sm:leading-[1.15]">
+                    Menangkap Setiap Cerita, <br class="hidden sm:inline">
+                    <span class="italic font-normal text-stone-300">Menjadikannya Abadi.</span>
+                </h1>
+
+                <p id="heroDescription" class="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-stone-300 leading-relaxed font-light px-2 sm:px-0">
+                    Mengabadikan Pencapaian, Petualangan, dan Aksi Dinamis Anda. Abadikan wisuda berkesan, selebrasi pasca sidang, dokumentasi tour/travel, dan aksi dinamis olahraga Anda bersama Nabiel Lukman.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 pt-2 sm:pt-4">
+                    <a href="#booking" class="w-full sm:w-auto px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-emerald-500 text-stone-950 font-bold text-xs sm:text-sm hover:bg-emerald-400 transition-all duration-300 transform hover:scale-[1.02] shadow-xl shadow-emerald-500/20 flex items-center justify-center gap-2.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Booking via WhatsApp
+                    </a>
+                    <a href="#portfolio" class="w-full sm:w-auto px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-stone-900/90 border border-stone-700 text-stone-200 hover:text-white hover:border-amber-400 font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-2.5">
+                        <i class="fa-regular fa-images"></i> Jelajahi Karya
+                    </a>
+                </div>
+
+                <!-- Live Quick Stats -->
+                <div id="statsContainer" class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-12 sm:pt-16 max-w-4xl mx-auto border-t border-stone-800/80">
+                    <!-- Injected by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="py-20 sm:py-28 bg-stone-900/70 border-b border-stone-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+                <div class="max-w-3xl mx-auto text-center space-y-3.5 mb-12 sm:mb-16">
+                    <span class="text-xs uppercase tracking-[0.2em] font-semibold text-amber-400">Jam Operasional & Slot Sesi Fleksibel</span>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-white">Jadwal Sesi Foto Tersedia</h2>
+                    <p class="text-stone-400 text-xs sm:text-sm md:text-base leading-relaxed">
+                        Tersedia banyak pilihan slot waktu fleksibel mulai pagi hingga malam untuk memenuhi kebutuhan jadwal pemotretan Anda:
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7">
+                    <!-- Senin -->
+                    <div class="p-7 sm:p-8 rounded-3xl bg-stone-950/90 border border-stone-800 hover:border-amber-400/50 transition-all flex flex-col justify-between space-y-6">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold text-lg text-white">Senin</span>
+                                <span class="text-[10px] uppercase font-semibold px-2.5 py-1 rounded-full bg-amber-400/10 text-amber-400 border border-amber-400/20">Siang - Malam</span>
+                            </div>
+                            <div class="text-2xl sm:text-3xl font-serif font-bold text-amber-400">13.00 – 22.00</div>
+                            <p class="text-xs sm:text-sm text-stone-400 leading-relaxed">Sesi wisuda siang/sore, golden hour sunset, & liputan olahraga malam.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-900 text-xs text-emerald-400 font-medium flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check"></i> 9 Slot Jam Tersedia
+                        </div>
+                    </div>
+
+                    <!-- Jumat -->
+                    <div class="p-7 sm:p-8 rounded-3xl bg-stone-950/90 border border-stone-800 hover:border-amber-400/50 transition-all flex flex-col justify-between space-y-6">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold text-lg text-white">Jumat</span>
+                                <span class="text-[10px] uppercase font-semibold px-2.5 py-1 rounded-full bg-emerald-400/10 text-emerald-400 border border-emerald-400/20">Pagi - Malam</span>
+                            </div>
+                            <div class="text-2xl sm:text-3xl font-serif font-bold text-amber-400">07.00 – 22.00</div>
+                            <p class="text-xs sm:text-sm text-stone-400 leading-relaxed">Full day slot: Pagi cerah wisuda/sidang, sesi outdoor siang, & match malam.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-900 text-xs text-emerald-400 font-medium flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check"></i> 14 Slot Jam Tersedia
+                        </div>
+                    </div>
+
+                    <!-- Sabtu -->
+                    <div class="p-7 sm:p-8 rounded-3xl bg-stone-950/90 border border-stone-800 hover:border-amber-400/50 transition-all flex flex-col justify-between space-y-6">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold text-lg text-white">Sabtu</span>
+                                <span class="text-[10px] uppercase font-semibold px-2.5 py-1 rounded-full bg-sky-400/10 text-sky-400 border border-sky-400/20">Pagi - Malam</span>
+                            </div>
+                            <div class="text-2xl sm:text-3xl font-serif font-bold text-amber-400">07.00 – 22.00</div>
+                            <p class="text-xs sm:text-sm text-stone-400 leading-relaxed">Favorit wisuda akbar, dokumentasi trip akhir pekan, & turnamen olahraga.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-900 text-xs text-emerald-400 font-medium flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check"></i> 14 Slot Jam Tersedia
+                        </div>
+                    </div>
+
+                    <!-- Minggu -->
+                    <div class="p-7 sm:p-8 rounded-3xl bg-stone-950/90 border border-stone-800 hover:border-amber-400/50 transition-all flex flex-col justify-between space-y-6">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold text-lg text-white">Minggu</span>
+                                <span class="text-[10px] uppercase font-semibold px-2.5 py-1 rounded-full bg-purple-400/10 text-purple-400 border border-purple-400/20">Pagi - Malam</span>
+                            </div>
+                            <div class="text-2xl sm:text-3xl font-serif font-bold text-amber-400">07.00 – 22.00</div>
+                            <p class="text-xs sm:text-sm text-stone-400 leading-relaxed">Dokumentasi perjalanan liburan (tour/travel), outdoor adventure, & car free day.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-900 text-xs text-emerald-400 font-medium flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check"></i> 14 Slot Jam Tersedia
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 sm:mt-12 text-center">
+                    <p class="text-xs sm:text-sm text-stone-500">
+                        * Hari Selasa, Rabu, dan Kamis dialokasikan untuk pasca-produksi (editing warna, kurasi foto, dan pengiriman link drive ke klien).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Gallery Section -->
+        <section id="portfolio" class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-16">
+                <span class="text-xs uppercase tracking-[0.2em] font-semibold text-amber-400">Galeri Terpilih</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white">Koleksi Visual Pilihan</h2>
+                <p class="text-stone-400 text-sm sm:text-base leading-relaxed">
+                    Setiap foto memiliki narasi tersendiri. Gunakan filter di bawah ini untuk melihat portofolio berdasarkan kategori proyek.
+                </p>
+
+                <!-- Category Filter Buttons -->
+                <div class="flex items-center justify-start sm:justify-center gap-2.5 sm:gap-3.5 pt-6 overflow-x-auto no-scrollbar pb-2 sm:pb-0 px-2 sm:px-0" id="filterContainer">
+                    <button class="filter-btn active shrink-0 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs font-semibold tracking-wide transition-all bg-amber-400 text-stone-950 shadow-md shadow-amber-500/10 whitespace-nowrap" data-filter="all">
+                        Semua Karya (<span id="totalCount">40</span>)
+                    </button>
+                    <button class="filter-btn shrink-0 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs font-medium tracking-wide transition-all bg-stone-900 border border-stone-800 text-stone-400 hover:text-white hover:border-stone-700 whitespace-nowrap" data-filter="wisuda">
+                        Foto Wisuda
+                    </button>
+                    <button class="filter-btn shrink-0 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs font-medium tracking-wide transition-all bg-stone-900 border border-stone-800 text-stone-400 hover:text-white hover:border-stone-700 whitespace-nowrap" data-filter="sidang">
+                        Foto Sidang
+                    </button>
+                    <button class="filter-btn shrink-0 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs font-medium tracking-wide transition-all bg-stone-900 border border-stone-800 text-stone-400 hover:text-white hover:border-stone-700 whitespace-nowrap" data-filter="travel">
+                        Tour & Travel
+                    </button>
+                    <button class="filter-btn shrink-0 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs font-medium tracking-wide transition-all bg-stone-900 border border-stone-800 text-stone-400 hover:text-white hover:border-stone-700 whitespace-nowrap" data-filter="sport">
+                        Sport & Action
+                    </button>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid Container -->
+            <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8 lg:gap-10">
+                <!-- Dynamic Items Injected by JavaScript -->
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 sm:py-28 bg-stone-900/60 border-y border-stone-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-20 items-center">
+                    
+                    <!-- Photographer Image / Portrait -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative rounded-3xl overflow-hidden border border-stone-700/80 shadow-2xl bg-stone-900">
+                            <img id="aboutProfileImage" 
+                                 src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 1125'%3E%3Crect width='900' height='1125' fill='%231c1917'/%3E%3Crect x='240' y='430' width='420' height='520' rx='70' fill='%23b9b0a9'/%3E%3Ccircle cx='450' cy='325' r='175' fill='%238d817d'/%3E%3Cg stroke='%23f59e0b' stroke-width='3' opacity='0.6'%3E%3Cline x1='220' y1='720' x2='680' y2='720'/%3E%3Cline x1='220' y1='742' x2='680' y2='742'/%3E%3Cline x1='220' y1='764' x2='680' y2='764'/%3E%3Cline x1='220' y1='786' x2='680' y2='786'/%3E%3Cline x1='220' y1='808' x2='680' y2='808'/%3E%3C/g%3E%3Ctext x='450' y='980' text-anchor='middle' font-size='38' font-family='Arial, sans-serif' font-weight='700' fill='%23ffffff'%3ENabiel%3C/text%3E%3Ctext x='450' y='1038' text-anchor='middle' font-size='24' font-family='Arial, sans-serif' font-weight='700' fill='%23f59e0b'%3ELukman%3C/text%3E%3C/svg%3E" 
+                                 alt="Nabiel Lukman" 
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1552058544-f2b08422138a?q=80&w=800&auto=format&fit=crop';"
+                                 class="w-full aspect-[4/5] object-cover object-top filter grayscale hover:grayscale-0 transition-all duration-700">
+                            <div class="absolute bottom-0 inset-x-0 p-6 sm:p-8 bg-gradient-to-t from-stone-950 via-stone-950/80 to-transparent">
+                                <div id="aboutName" class="text-xl font-serif font-bold text-white">Nabiel Lukman</div>
+                                <div id="aboutTitle" class="text-xs sm:text-sm text-amber-400 font-medium mt-0.5">Freelance Photographer & Visual Creator</div>
+                            </div>
+                        </div>
+                        <!-- Decorative Frame Behind -->
+                        <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-amber-400/30 rounded-3xl -z-10 hidden sm:block"></div>
+                    </div>
+
+                    <!-- Bio & Details -->
+                    <div class="lg:col-span-7 space-y-6 sm:space-y-8">
+                        <div class="space-y-2.5">
+                            <span class="text-xs uppercase tracking-[0.2em] font-semibold text-amber-400">Filosofi & Pendekatan</span>
+                            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white leading-tight">
+                                Seni Menangkap Emosi yang Autentik Tanpa Rekayasa Berlebihan.
+                            </h2>
+                        </div>
+
+                        <p id="aboutBio" class="text-stone-300 text-sm sm:text-base leading-relaxed sm:leading-loose font-light">
+                            Halo! Saya Nabiel Lukman, seorang freelance fotografer profesional yang berfokus mengabadikan momen-momen berharga dan penuh energi. Spesialisasi saya meliputi dokumentasi wisuda & selebrasi setelah sidang, dokumentasi perjalanan (tour/travel), hingga fotografi olahraga (sport). Menggunakan Sony Alpha 7 III & lensa Viltrox 35mm f/1.8 untuk menghasilkan gambar tajam dengan karakter warna natural dan bokeh sinematik.
+                        </p>
+
+                        <div class="p-6 sm:p-7 rounded-3xl bg-stone-950/80 border border-stone-800 space-y-4">
+                            <div class="text-sm sm:text-base font-semibold text-white flex items-center gap-2.5">
+                                <i class="fa-solid fa-camera-retro text-amber-400"></i> Peralatan & Standar Kualitas (Gear Spec)
+                            </div>
+                            <ul id="gearList" class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-stone-400">
+                                <!-- Injected by JavaScript -->
+                            </ul>
+                        </div>
+
+                        <div class="pt-2 flex flex-wrap gap-4 items-center">
+                            <a href="#booking" class="px-7 sm:px-8 py-3.5 sm:py-4 rounded-full bg-emerald-500 text-stone-950 text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-emerald-400 transition-all duration-300 transform hover:scale-[1.02] inline-flex items-center gap-2.5 shadow-lg shadow-emerald-500/10">
+                                <i class="fa-brands fa-whatsapp text-base"></i> Hubungi Langsung via WhatsApp
+                            </a>
+                            <a id="aboutInstagramLink" href="https://instagram.com/nabiel_luck" target="_blank" rel="noopener noreferrer" class="px-7 sm:px-8 py-3.5 sm:py-4 rounded-full bg-stone-800 text-stone-300 text-xs sm:text-sm font-medium hover:text-white hover:bg-stone-700 transition-colors inline-flex items-center gap-2.5">
+                                <i class="fa-brands fa-instagram text-pink-400"></i> <span id="aboutInstagram">@nabiel_luck</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-14 sm:mb-20">
+                <span class="text-xs uppercase tracking-[0.2em] font-semibold text-amber-400">Paket & Investasi</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white">Pilihan Layanan Fotografi</h2>
+                <p class="text-stone-400 text-sm sm:text-base leading-relaxed">
+                    Investasi transparan untuk kenangan abadi Anda. Kustomisasi paket juga dapat disesuaikan dengan durasi acara.
+                </p>
+            </div>
+
+            <div id="packagesContainer" class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 items-stretch">
+                <!-- Injected by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 sm:py-28 bg-stone-900/40 border-t border-stone-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+                <div class="text-center max-w-3xl mx-auto space-y-4 mb-14 sm:mb-20">
+                    <span class="text-xs uppercase tracking-[0.2em] font-semibold text-amber-400">Ulasan Nyata</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white">Apa Kata Klien Kami?</h2>
+                    <p class="text-stone-400 text-sm sm:text-base leading-relaxed">
+                        Kepuasan dan kenyamanan klien dalam setiap sesi adalah prioritas tertinggi saya.
+                    </p>
+                </div>
+
+                <div id="testimonialsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-7 sm:gap-8 lg:gap-10">
+                    <!-- Injected by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="booking" class="py-20 sm:py-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-10">
+            <div class="bg-stone-900 border border-stone-800 rounded-3xl p-7 sm:p-12 lg:p-14 shadow-2xl relative overflow-hidden">
+                
+                <div class="absolute -top-24 -right-24 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center max-w-2xl mx-auto space-y-4 mb-10 sm:mb-12">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-brands fa-whatsapp"></i> Reservasi Satu Pintu WhatsApp
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white">Booking Sesi Pemotretan</h2>
+                    <p class="text-stone-400 text-xs sm:text-sm md:text-base leading-relaxed">
+                        Isi form ringkas di bawah ini. Jadwal dan detail akan langsung diformat secara otomatis ke chat WhatsApp fotografer untuk konfirmasi instan.
+                    </p>
+                </div>
+
+                <!-- Toast Notification Box -->
+                <div id="toastNotification" class="hidden mb-6 p-4 sm:p-5 rounded-2xl text-xs sm:text-sm bg-rose-950/90 border border-rose-500/50 text-rose-200 flex items-center gap-3.5 transition-all duration-300">
+                    <i class="fa-solid fa-circle-exclamation text-rose-400 text-lg shrink-0"></i>
+                    <span id="toastMessage"></span>
+                </div>
+
+                <form id="bookingForm" class="space-y-6 sm:space-y-7">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-7">
+                        <!-- Nama Lengkap -->
+                        <div class="space-y-2">
+                            <label for="clientName" class="block text-xs font-semibold uppercase tracking-wider text-stone-300">
+                                Nama Lengkap <span class="text-emerald-400">*</span>
+                            </label>
+                            <input type="text" id="clientName" required placeholder="Contoh: Dimas Setiawan"
+                                   class="w-full bg-stone-950 border border-stone-800 rounded-2xl px-4 sm:px-5 py-3.5 text-sm text-stone-200 focus:outline-none focus:border-emerald-400 transition-colors">
+                        </div>
+
+                        <!-- Pilihan Paket -->
+                        <div class="space-y-2">
+                            <label for="packageSelect" class="block text-xs font-semibold uppercase tracking-wider text-stone-300">
+                                Pilihan Paket Foto <span class="text-emerald-400">*</span>
+                            </label>
+                            <select id="packageSelect" required
+                                    class="w-full bg-stone-950 border border-stone-800 rounded-2xl px-4 sm:px-5 py-3.5 text-sm text-stone-200 focus:outline-none focus:border-emerald-400 transition-colors">
+                                <option value="" disabled selected>Pilih Kategori Layanan</option>
+                                <!-- Populated by JS -->
+                            </select>
+                        </div>
+
+                        <!-- Tanggal Pemotretan -->
+                        <div class="space-y-2">
+                            <label for="bookingDate" class="block text-xs font-semibold uppercase tracking-wider text-stone-300">
+                                Tanggal Sesi Foto <span class="text-emerald-400">*</span>
+                            </label>
+                            <input type="date" id="bookingDate" required
+                                   class="w-full bg-stone-950 border border-stone-800 rounded-2xl px-4 sm:px-5 py-3.5 text-sm text-stone-200 focus:outline-none focus:border-emerald-400 transition-colors">
+                            <span id="dateValidationFeedback" class="text-[11px] block transition-colors text-stone-500 mt-1">
+                                Hari tersedia: <strong>Senin (13.00-22.00) & Jumat/Sabtu/Minggu (07.00-22.00)</strong>
+                            </span>
+                        </div>
+
+                        <!-- Jam Sesi -->
+                        <div class="space-y-2">
+                            <label for="bookingTime" class="block text-xs font-semibold uppercase tracking-wider text-stone-300">
+                                Jam / Waktu Mulai Sesi <span class="text-emerald-400">*</span>
+                            </label>
+                            <select id="bookingTime" required disabled
+                                    class="w-full bg-stone-950 border border-stone-800 rounded-2xl px-4 sm:px-5 py-3.5 text-sm text-stone-200 focus:outline-none focus:border-emerald-400 transition-colors">
+                                <option value="" disabled selected>Pilih tanggal terlebih dahulu</option>
+                            </select>
+                            <span id="timeHelpText" class="text-[11px] text-stone-500 block mt-1">Slot jam akan disesuaikan otomatis dengan jadwal hari yang dipilih.</span>
+                        </div>
+
+                        <!-- Lokasi Pemotretan -->
+                        <div class="sm:col-span-2 space-y-2">
+                            <label for="clientLocation" class="block text-xs font-semibold uppercase tracking-wider text-stone-300">
+                                Lokasi / Nama Tempat Pemotretan
+                            </label>
+                            <input type="text" id="clientLocation" placeholder="Contoh: Balairung UGM Yogyakarta / Lapangan Futsal / Bromo Spot"
+                                   class="w-full bg-stone-950 border border-stone-800 rounded-2xl px-4 sm:px-5 py-3.5 text-sm text-stone-200 focus:outline-none focus:border-emerald-400 transition-colors">
+                        </div>
+                    </div>
+
+                    <!-- Pesan & Konsep -->
+                    <div class="space-y-2">
+                        <label for="clientMessage" class="block text-xs font-semibold uppercase tracking-wider text-stone-300">
+                            Catatan Konsep / Keperluan Khusus (Opsional)
+                        </label>
+                        <textarea id="clientMessage" rows="3" placeholder="Misal: Foto wisuda bersama 4 teman satu fakultas, konsep casual formal dengan toga..."
+                                  class="w-full bg-stone-950 border border-stone-800 rounded-2xl px-4 sm:px-5 py-3.5 text-sm text-stone-200 focus:outline-none focus:border-emerald-400 transition-colors"></textarea>
+                    </div>
+
+                    <!-- Action Button -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <button type="button" id="directWhatsAppActionBtn" class="w-full sm:w-auto px-10 sm:px-12 py-4 sm:py-4.5 rounded-full bg-emerald-500 text-stone-950 font-bold text-xs sm:text-sm uppercase tracking-widest hover:bg-emerald-400 transition-all duration-300 transform hover:scale-[1.02] shadow-xl shadow-emerald-500/25 flex items-center justify-center gap-2.5">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Kirim Format Booking ke WhatsApp
+                        </button>
+                    </div>
+
+                    <div class="text-center pt-2">
+                        <span class="text-xs text-stone-500">
+                            * Pesan akan otomatis terisi dan siap dikirimkan langsung ke nomor WhatsApp fotografer.
+                        </span>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 bg-stone-950/95 backdrop-blur-xl flex items-center justify-center p-4 sm:p-8 opacity-0 pointer-events-none transition-opacity duration-300">
+        
+        <!-- Close Button -->
+        <button id="closeLightbox" class="absolute top-5 sm:top-6 right-5 sm:right-6 text-stone-400 hover:text-white text-2xl sm:text-3xl z-50 p-2.5 focus:outline-none transition-colors" aria-label="Tutup">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Prev / Next Navigation -->
+        <button id="prevBtn" class="absolute left-3 sm:left-8 text-stone-400 hover:text-white text-2xl sm:text-3xl z-50 p-3 sm:p-4 focus:outline-none transition-colors" aria-label="Sebelumnya">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button id="nextBtn" class="absolute right-3 sm:right-8 text-stone-400 hover:text-white text-2xl sm:text-3xl z-50 p-3 sm:p-4 focus:outline-none transition-colors" aria-label="Berikutnya">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <!-- Lightbox Content Body -->
+        <div class="max-w-5xl w-full max-h-[90vh] flex flex-col items-center justify-center space-y-4 px-2 sm:px-0">
+            <div class="relative w-full flex items-center justify-center overflow-hidden rounded-2xl">
+                <img id="lightboxImage" src="" alt="Detail Foto" class="max-h-[65vh] sm:max-h-[72vh] w-auto max-w-full object-contain rounded-xl shadow-2xl">
+            </div>
+
+            <!-- Details Panel Below Photo -->
+            <div class="w-full max-w-2xl text-center space-y-1.5 bg-stone-900/70 p-4 sm:p-5 rounded-2xl border border-stone-800/80">
+                <span id="lightboxCategory" class="text-[10px] sm:text-xs tracking-widest uppercase font-semibold text-amber-400"></span>
+                <h4 id="lightboxTitle" class="text-base sm:text-lg font-serif font-bold text-white"></h4>
+                <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-stone-400 pt-1">
+                    <span id="lightboxCamera"><i class="fa-solid fa-camera mr-1.5 text-amber-400"></i></span>
+                    <span id="lightboxClient"><i class="fa-solid fa-user mr-1.5 text-amber-400"></i></span>
+                    <span id="lightboxYear"><i class="fa-regular fa-calendar mr-1.5 text-amber-400"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-stone-950 border-t border-stone-800 text-stone-400 text-xs sm:text-sm py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 text-center md:text-left">
+            <div>
+                <div id="footerName" class="font-serif text-lg sm:text-xl font-bold text-white">Nabiel Lukman</div>
+                <p id="footerLocation" class="text-stone-500 mt-1">Yogyakarta & sekitarnya, Indonesia</p>
+            </div>
+
+            <div class="flex items-center space-x-6 sm:space-x-8 text-base sm:text-lg">
+                <a id="footerInstagram" href="https://instagram.com/nabiel_luck" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a id="footerEmail" href="mailto:nabielluqman5@gmail.com" class="hover:text-amber-400 transition-colors" title="Kirim Email">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+                <a id="footerWhatsApp" href="https://wa.me/6282328426863" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors" title="WhatsApp Langsung">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+
+            <div class="text-stone-600 text-xs">
+                &copy; <span id="currentYear">2026</span> Nabiel Lukman. Hak Cipta Dilindungi.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* ==============================================================================
+         * 1. DATA PROFIL & KONFIGURASI SITUS
+         * ============================================================================== */
+        const photographer = {
+            name: 'Nabiel Lukman',
+            title: 'Freelance Photographer & Visual Creator',
+            tagline: 'Mengabadikan Pencapaian, Petualangan, dan Aksi Dinamis Anda',
+            bio: 'Halo! Saya Nabiel Lukman, seorang freelance fotografer profesional yang berfokus mengabadikan momen-momen berharga dan penuh energi. Spesialisasi saya meliputi dokumentasi wisuda & selebrasi setelah sidang, dokumentasi perjalanan (tour/travel), hingga fotografi olahraga (sport) . Menggunakan Sony Alpha 7 III & lensa Viltrox 35mm f/1.8 untuk menghasilkan gambar tajam dengan karakter warna natural dan bokeh sinematik.',
+            location: 'Yogyakarta & sekitarnya, Indonesia',
+            email: 'nabielluqman5@gmail.com',
+            phone: '+62 823-2842-6863',
+            whatsapp_number: '6282328426863',
+            instagram: '@nabiel_luck',
+            profile_image: 'assets/images/profile.jpg',
+            hero_background: 'assets/images/hero-bg.jpg',
+            stats: [
+                { number: '1+', label: 'Tahun Pengalaman' },
+                { number: '10', label: 'Sesi Foto Sukses' },
+                { number: '98%', label: 'Klien Puas' },
+                { number: '2', label: 'Event & Trip' }
+            ],
+            gear: [
+                'Kamera Utama: Sony Alpha 7 III (Full-Frame Sensor)',
+                'Lensa Utama: Viltrox evo AF 35mm f/1.8',
+                'Post-Processing: Adobe Lightroom Classic'
+            ]
+        };
+
+        /* ==============================================================================
+         * 2. DATA PORTOFOLIO GALERI
+         * ============================================================================== */
+        const portfolioItems = [
+            // --- Kategori: Foto Wisuda ---
+            { id: 1, title: 'Foto Wisuda 1', category: 'wisuda', category_name: 'Foto Wisuda', image: 'assets/images/foto wisuda/foto wisuda 1.jpg', camera: 'Sony A7 III • Viltrox evo AF 35mm f/1.8', client: 'Wisuda', year: '2026' },
+            { id: 2, title: 'Foto Wisuda 2', category: 'wisuda', category_name: 'Foto Wisuda', image: 'assets/images/foto wisuda/foto wisuda 2.jpg', camera: 'Sony A7 III • Viltrox evo AF 35mm f/1.8', client: 'Wisuda', year: '2026' },
+            { id: 3, title: 'Foto Wisuda 3', category: 'wisuda', category_name: 'Foto Wisuda', image: 'assets/images/foto wisuda/foto wisuda 3.jpg', camera: 'Sony A7 III • Viltrox 35mm f/1.8', client: 'Wisuda', year: '2026' },
+            { id: 4, title: 'Foto Wisuda 4', category: 'wisuda', category_name: 'Foto Wisuda', image: 'assets/images/foto wisuda/foto wisuda 4.jpg', camera: 'Sony A7 III • Viltrox evo AF 35mm f/1.8', client: 'Wisuda', year: '2026' },
+            { id: 5, title: 'Foto Wisuda 5', category: 'wisuda', category_name: 'Foto Wisuda', image: 'assets/images/foto wisuda/foto wisuda 5.jpg', camera: 'Sony A7 III • Viltrox 35mm f/1.8', client: 'Wisuda', year: '2026' },
+            { id: 6, title: 'Foto Wisuda 6', category: 'wisuda', category_name: 'Foto Wisuda', image: 'assets/images/foto wisuda/foto wisuda 6.jpg', camera: 'Sony A7 III • Viltrox evo AF 35mm f/1.8', client: 'Wisuda', year: '2026' },
+            { id: 7, title: 'Foto Wisuda 7', category: 'wisuda', category_name: 'Foto Wisuda', image: 'assets/images/foto wisuda/foto wisuda 7.jpg', camera: 'Sony A7 III • Viltrox 35mm f/1.8', client: 'Wisuda', year: '2026' },
+            { id: 8, title: 'Foto Wisuda 8', category: 'wisuda', category_name: 'Foto Wisuda', image: 'assets/images/foto wisuda/foto wisuda 8.jpg', camera: 'Sony A7 III • Viltrox evo AF 35mm f/1.8', client: 'Wisuda', year: '2026' },
+
+            // --- Kategori: Foto Sidang ---
+            { id: 9, title: 'Foto Sidang 1', category: 'sidang', category_name: 'Foto Sidang', image: 'assets/images/foto sidang/foto sidang 1.jpg', camera: 'Sony A7 III • Viltrox EVO AF 35mm f/1.8', client: 'Sidang', year: '2026' },
+            { id: 10, title: 'Foto Sidang 2', category: 'sidang', category_name: 'Foto Sidang', image: 'assets/images/foto sidang/foto sidang 2.jpg', camera: 'Sony A7 III • Viltrox 35mm f/1.8', client: 'Sidang', year: '2026' },
+            { id: 11, title: 'Foto Sidang 3', category: 'sidang', category_name: 'Foto Sidang', image: 'assets/images/foto sidang/foto sidang 3.jpg', camera: 'Sony A7 III • Viltrox EVO AF 35mm f/1.8', client: 'Sidang', year: '2026' },
+            { id: 12, title: 'Foto Sidang 4', category: 'sidang', category_name: 'Foto Sidang', image: 'assets/images/foto sidang/foto sidang 4.jpg', camera: 'Sony A7 III • Viltrox 35mm f/1.8', client: 'Sidang', year: '2026' },
+            { id: 13, title: 'Foto Sidang 5', category: 'sidang', category_name: 'Foto Sidang', image: 'assets/images/foto sidang/foto sidang 5.jpg', camera: 'Sony A7 III • Viltrox EVO AF 35mm f/1.8', client: 'Sidang', year: '2026' },
+            { id: 14, title: 'Foto Sidang 6', category: 'sidang', category_name: 'Foto Sidang', image: 'assets/images/foto sidang/foto sidang 6.jpg', camera: 'Sony A7 III • Viltrox EVO AF 35mm f/1.8', client: 'Sidang', year: '2026' },
+            { id: 15, title: 'Foto Sidang 7', category: 'sidang', category_name: 'Foto Sidang', image: 'assets/images/foto sidang/foto sidang 7.jpg', camera: 'Sony A7 III • Viltrox 35mm f/1.8', client: 'Sidang', year: '2026' },
+            { id: 16, title: 'Foto Sidang 8', category: 'sidang', category_name: 'Foto Sidang', image: 'assets/images/foto sidang/foto sidang 8.jpg', camera: 'Sony A7 III • Viltrox EVO AF 35mm f/1.8', client: 'Sidang', year: '2026' }
+        ];
+
+        // Generate Tour & Travel items (1-12)
+        for (let tourNumber = 1; tourNumber <= 12; tourNumber++) {
+            const tourExtension = tourNumber <= 10 ? 'JPG' : 'jpg';
+            portfolioItems.push({
+                id: 16 + tourNumber,
+                title: 'Foto Tour ' + tourNumber,
+                category: 'travel',
+                category_name: 'Tour & Travel',
+                image: `assets/images/foto tour/tour ${tourNumber}.${tourExtension}`,
+                camera: 'Sony A7 III • Viltrox 35mm f/1.8',
+                client: 'Tour & Travel',
+                year: '2026'
+            });
+        }
+
+        // Generate Sport & Action items (1-12)
+        for (let sportNumber = 1; sportNumber <= 12; sportNumber++) {
+            portfolioItems.push({
+                id: 28 + sportNumber,
+                title: 'Foto Sport ' + sportNumber,
+                category: 'sport',
+                category_name: 'Sport & Action',
+                image: `assets/images/foto sport/foto sport ${sportNumber}.JPG`,
+                camera: 'Sony A7 III • Viltrox EVO AF 35mm f/1.8',
+                client: 'Sport & Action',
+                year: '2026'
+            });
+        }
+
+        /* ==============================================================================
+         * 3. DATA PAKET LAYANAN & TARIF
+         * ============================================================================== */
+        const packages = [
+            {
+                name: 'Wisuda & Pasca Sidang',
+                subtitle: 'Dokumentasi momen kelulusan, selempang sidang, bersama keluarga & sahabat.',
+                price: 'Rp 250.000',
+                features: [
+                    '1 Jam Sesi Foto Area Kampus',
+                    'Unlimited Foto (Semua file mentah / JPEG resolusi penuh diberikan)',
+                    '20 Foto Best Choice Full Edited & Retouched',
+                    'Pengarahan Pose Natural & Fun',
+                    'Akses Google Drive Link Cepat (1-3 Hari Jadi)',
+                    'Tambahan biaya untuk sesi di luar area kampus atau lokasi khusus akan dikenakan biaya tambahan sesuai jarak dan durasi.'
+                ],
+                is_popular: true
+            },
+            {
+                name: 'Tour, Trip & Travel',
+                subtitle: 'Abadikan liburan, open trip, atau wisata keluarga tanpa repot selfie.',
+                price: 'Rp 1.250.000',
+                features: [
+                    'Full Day Photo Documentation',
+                    'Foto Estetik untuk Feed & Story Media Sosial',
+                    'Semua File Original Resolusi Tinggi',
+                    'Video Teaser Singkat Reel / Story 30 Detik'
+                ],
+                is_popular: false
+            },
+            {
+                name: 'Sport & Action Events',
+                subtitle: 'Liputan foto laga olahraga: Running, Mini Soccer, Basket, Padel, dll.',
+                price: 'Rp 300.000',
+                features: [
+                    'tergantung Durasi Pertandingan / Durasi Event',
+                    'High-Speed Shutter Action Freeze Shots',
+                    'Semua File Foto High-Resolution Dikirim di Hari yang Sama',
+                    'Cocok untuk Tim Komunitas & Brand Olahraga'
+                ],
+                is_popular: false
+            }
+        ];
+
+        /* ==============================================================================
+         * 4. DATA TESTIMONI KLIEN
+         * ============================================================================== */
+        const testimonials = [
+            {
+                name: 'Kak Indah',
+                role: 'Sesi Foto Pasca Sidang Skripsi',
+                comment: 'bagusaa ka 9/10 suka sukaaaaa',
+                rating: 5
+            },
+            {
+                name: 'Mas Dito',
+                role: 'Wisudawan Atma Jaya Yogyakarta',
+                comment: 'Walah kereenn mass, intinya semangat aja terus dalemin fotografer sama cyber securitynya',
+                rating: 5
+            },
+            {
+                name: 'Rania & Dimas',
+                role: 'Liburan & Travel Trip di Jogja',
+                comment: 'Sangat puas pakai jasa foto Mas Nabiel pas trip kemarin. Kita tinggal fokus nikmatin jalan-jalan dan seru-seruan, dapet stok foto liburan yang vibes-nya sinematik banget!',
+                rating: 5
+            }
+        ];
+
+        // Set Year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.getElementById('totalCount').textContent = portfolioItems.length;
+
+        // Render Stats
+        const statsContainer = document.getElementById('statsContainer');
+        photographer.stats.forEach(st => {
+            const div = document.createElement('div');
+            div.className = 'text-center p-4 sm:p-5 rounded-2xl bg-stone-900/40 backdrop-blur-sm border border-stone-800/50';
+            div.innerHTML = `
+                <div class="text-2xl sm:text-3xl lg:text-4xl font-bold font-serif text-amber-400">${st.number}</div>
+                <div class="text-xs sm:text-sm text-stone-400 font-medium mt-1.5">${st.label}</div>
+            `;
+            statsContainer.appendChild(div);
+        });
+
+        // Render Gear Specs
+        const gearList = document.getElementById('gearList');
+        photographer.gear.forEach(item => {
+            const li = document.createElement('li');
+            li.className = 'flex items-start gap-2.5';
+            li.innerHTML = `
+                <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                <span>${item}</span>
+            `;
+            gearList.appendChild(li);
+        });
+
+        // Render Packages
+        const packagesContainer = document.getElementById('packagesContainer');
+        const packageSelect = document.getElementById('packageSelect');
+        
+        packages.forEach(pkg => {
+            // Select dropdown options
+            const opt = document.createElement('option');
+            opt.value = pkg.name;
+            opt.textContent = `${pkg.name} (${pkg.price})`;
+            packageSelect.appendChild(opt);
+
+            // Cards
+            const card = document.createElement('div');
+            card.className = `relative rounded-3xl p-8 sm:p-10 flex flex-col justify-between transition-all duration-300 ${pkg.is_popular ? 'bg-stone-900 border-2 border-emerald-500/80 shadow-2xl shadow-emerald-500/10 sm:-translate-y-2' : 'bg-stone-900/50 border border-stone-800 hover:border-stone-700'}`;
+            
+            let badgeHtml = pkg.is_popular ? `
+                <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-emerald-500 text-stone-950 text-[10px] font-bold tracking-widest uppercase py-1.5 px-4 rounded-full shadow-md whitespace-nowrap">
+                    Paling Diminati Klien
+                </div>
+            ` : '';
+
+            let featuresHtml = pkg.features.map(ft => `
+                <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-circle-check text-emerald-400 text-sm mt-0.5 shrink-0"></i>
+                    <span class="leading-relaxed">${ft}</span>
+                </li>
+            `).join('');
+
+            card.innerHTML = `
+                ${badgeHtml}
+                <div class="space-y-6 sm:space-y-8">
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-serif font-bold text-white">${pkg.name}</h3>
+                        <p class="text-xs sm:text-sm text-stone-400 mt-2.5 min-h-[36px] leading-relaxed">${pkg.subtitle}</p>
+                    </div>
+
+                    <div class="py-5 border-y border-stone-800">
+                        <span class="text-xs text-stone-400 block font-medium">Mulai Dari</span>
+                        <span class="text-3xl sm:text-4xl font-serif font-bold text-amber-400 mt-1 block">${pkg.price}</span>
+                    </div>
+
+                    <ul class="space-y-3.5 text-xs sm:text-sm text-stone-300">
+                        ${featuresHtml}
+                    </ul>
+                </div>
+
+                <div class="pt-8 sm:pt-10">
+                    <a href="#booking" 
+                       onclick="selectPackage('${pkg.name.replace(/'/g, "\\'")}')"
+                       class="w-full py-3.5 sm:py-4 rounded-2xl text-xs sm:text-sm font-semibold uppercase tracking-wider text-center transition-all block ${pkg.is_popular ? 'bg-emerald-500 text-stone-950 hover:bg-emerald-400 font-bold shadow-lg shadow-emerald-500/20' : 'bg-stone-800 text-white hover:bg-stone-700'}">
+                        Pilih & Booking Paket
+                    </a>
+                </div>
+            `;
+            packagesContainer.appendChild(card);
+        });
+
+        const customOpt = document.createElement('option');
+        customOpt.value = 'Custom Tour / Dokumentasi Khusus';
+        customOpt.textContent = 'Custom Tour / Dokumentasi Khusus';
+        packageSelect.appendChild(customOpt);
+
+        // Render Testimonials
+        const testimonialsContainer = document.getElementById('testimonialsContainer');
+        testimonials.forEach(t => {
+            const card = document.createElement('div');
+            card.className = 'p-8 sm:p-9 rounded-3xl bg-stone-950 border border-stone-800/80 flex flex-col justify-between relative shadow-xl';
+            let stars = '<div class="flex text-amber-400 text-xs sm:text-sm gap-1">';
+            for(let i=0; i<t.rating; i++) {
+                stars += '<i class="fa-solid fa-star"></i>';
+            }
+            stars += '</div>';
+
+            card.innerHTML = `
+                <div class="space-y-4">
+                    ${stars}
+                    <p class="text-stone-300 text-sm sm:text-base italic leading-relaxed sm:leading-loose font-light">
+                        "${t.comment}"
+                    </p>
+                </div>
+                <div class="pt-6 mt-6 border-t border-stone-800/60 flex items-center gap-3.5">
+                    <div class="w-11 h-11 rounded-full bg-stone-800 border border-amber-400/40 flex items-center justify-center font-serif text-amber-400 font-bold text-base shrink-0">
+                        ${t.name.charAt(0)}
+                    </div>
+                    <div>
+                        <div class="text-sm sm:text-base font-semibold text-white">${t.name}</div>
+                        <div class="text-xs text-stone-500 mt-0.5">${t.role}</div>
+                    </div>
+                </div>
+            `;
+            testimonialsContainer.appendChild(card);
+        });
+
+        // Fallback Placeholder Generator
+        function handleImageFallback(imgElement, categoryName, originalPath) {
+            imgElement.onerror = null;
+            const svgData = `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`
+                <svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" fill="#1c1917">
+                    <rect width="800" height="1000" fill="#141210"/>
+                    <rect x="20" y="20" width="760" height="960" rx="20" fill="#1c1917" stroke="#292524" stroke-width="2"/>
+                    <circle cx="400" cy="450" r="60" fill="#292524"/>
+                    <path d="M375 440a25 25 0 1 1 50 0v20a25 25 0 1 1-50 0z" fill="#f59e0b" opacity="0.6"/>
+                    <text x="400" y="560" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="bold" fill="#f59e0b" text-anchor="middle" letter-spacing="2">${categoryName.toUpperCase()}</text>
+                    <text x="400" y="600" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" fill="#78716c" text-anchor="middle">Slot: ${originalPath}</text>
+                    <text x="400" y="630" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" fill="#a8a29e" text-anchor="middle">Simpan foto Anda di folder assets/images/</text>
+                </svg>
+            `)}`;
+            imgElement.src = svgData;
+        }
+
+        // Render Gallery Items
+        const galleryGrid = document.getElementById('galleryGrid');
+        portfolioItems.forEach((item, index) => {
+            const card = document.createElement('div');
+            card.className = 'gallery-item group relative rounded-3xl overflow-hidden bg-stone-900 border border-stone-800/90 hover:border-stone-700 cursor-pointer aspect-[4/5] shadow-xl';
+            card.dataset.category = item.category;
+            card.dataset.index = index;
+            card.dataset.title = item.title;
+            card.dataset.catname = item.category_name;
+            card.dataset.image = item.image;
+            card.dataset.camera = item.camera;
+            card.dataset.client = item.client;
+            card.dataset.year = item.year;
+
+            card.innerHTML = `
+                <img src="${item.image}" 
+                     alt="${item.title}" 
+                     loading="lazy"
+                     onerror="handleImageFallback(this, '${item.category_name}', '${item.image}');"
+                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 sm:p-8 flex flex-col justify-end">
+                    <div class="overlay-info opacity-0 space-y-2.5">
+                        <span class="text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase text-amber-400 bg-stone-950/80 px-3 py-1 rounded-md inline-block border border-amber-400/20">
+                            ${item.category_name}
+                        </span>
+                        <h3 class="text-lg sm:text-xl font-serif font-bold text-white group-hover:text-amber-200 transition-colors">
+                            ${item.title}
+                        </h3>
+                        <div class="flex items-center justify-between text-xs text-stone-300 pt-2 border-t border-stone-700/50">
+                            <span><i class="fa-solid fa-camera mr-1.5 text-amber-400"></i> ${item.camera}</span>
+                            <span class="font-medium text-stone-400">${item.year}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="absolute top-4 sm:top-5 right-4 sm:right-5 bg-stone-950/70 backdrop-blur-md text-white p-2.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                    <i class="fa-solid fa-expand text-xs"></i>
+                </div>
+            `;
+            galleryGrid.appendChild(card);
+        });
+
+        // 1. Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.replace('fa-xmark', 'fa-bars');
+            } else {
+                menuIcon.classList.replace('fa-bars', 'fa-xmark');
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.replace('fa-xmark', 'fa-bars');
+            });
+        });
+
+        // 2. Category Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-amber-400', 'text-stone-950', 'font-semibold', 'shadow-md', 'shadow-amber-500/10');
+                    b.classList.add('bg-stone-900', 'border', 'border-stone-800', 'text-stone-400');
+                });
+                btn.classList.add('active', 'bg-amber-400', 'text-stone-950', 'font-semibold', 'shadow-md', 'shadow-amber-500/10');
+                btn.classList.remove('bg-stone-900', 'border', 'border-stone-800', 'text-stone-400');
+
+                const filter = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (filter === 'all' || filter === category) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // 3. Lightbox Functionality
+        const lightboxModal = document.getElementById('lightboxModal');
+        const closeLightbox = document.getElementById('closeLightbox');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxCategory = document.getElementById('lightboxCategory');
+        const lightboxCamera = document.getElementById('lightboxCamera');
+        const lightboxClient = document.getElementById('lightboxClient');
+        const lightboxYear = document.getElementById('lightboxYear');
+
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            const item = galleryItems[currentIndex];
+            if (!item) return;
+
+            const imgChild = item.querySelector('img');
+            lightboxImage.src = imgChild ? imgChild.src : item.dataset.image;
+            lightboxTitle.textContent = item.dataset.title;
+            lightboxCategory.textContent = item.dataset.catname;
+            lightboxCamera.innerHTML = `<i class="fa-solid fa-camera mr-1.5 text-amber-400"></i> ${item.dataset.camera}`;
+            lightboxClient.innerHTML = `<i class="fa-solid fa-user mr-1.5 text-amber-400"></i> ${item.dataset.client}`;
+            lightboxYear.innerHTML = `<i class="fa-regular fa-calendar mr-1.5 text-amber-400"></i> ${item.dataset.year}`;
+
+            lightboxModal.classList.remove('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideLightbox() {
+            lightboxModal.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'auto';
+        }
+
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => openLightbox(index));
+        });
+
+        closeLightbox.addEventListener('click', hideLightbox);
+
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) hideLightbox();
+        });
+
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : galleryItems.length - 1;
+            openLightbox(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex < galleryItems.length - 1) ? currentIndex + 1 : 0;
+            openLightbox(currentIndex);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightboxModal.classList.contains('pointer-events-none')) {
+                if (e.key === 'Escape') hideLightbox();
+                if (e.key === 'ArrowLeft') prevBtn.click();
+                if (e.key === 'ArrowRight') nextBtn.click();
+            }
+        });
+
+        // 4. Auto-select Package
+        function selectPackage(packageName) {
+            const selectElement = document.getElementById('packageSelect');
+            if (selectElement) {
+                for (let i = 0; i < selectElement.options.length; i++) {
+                    if (selectElement.options[i].text.includes(packageName) || selectElement.options[i].value.includes(packageName)) {
+                        selectElement.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+        }
+
+        // 5. Schedule Validator & WhatsApp Message Generator
+        const fullDaySlots = ['07:00', '08:00', '09:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'];
+        const mondaySlots = ['13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'];
+
+        const scheduleData = {
+            1: { name: 'Senin', hours: '13.00 - 22.00 WIB', slots: mondaySlots },
+            5: { name: 'Jumat', hours: '07.00 - 22.00 WIB', slots: fullDaySlots },
+            6: { name: 'Sabtu', hours: '07.00 - 22.00 WIB', slots: fullDaySlots },
+            0: { name: 'Minggu', hours: '07.00 - 22.00 WIB', slots: fullDaySlots }
+        };
+
+        const bookingDateInput = document.getElementById('bookingDate');
+        const bookingTimeSelect = document.getElementById('bookingTime');
+        const dateFeedback = document.getElementById('dateValidationFeedback');
+        const directWhatsAppActionBtn = document.getElementById('directWhatsAppActionBtn');
+        const toastNotification = document.getElementById('toastNotification');
+        const toastMessage = document.getElementById('toastMessage');
+
+        // Set minimum booking date to today
+        const todayStr = new Date().toISOString().split('T')[0];
+        bookingDateInput.setAttribute('min', todayStr);
+
+        function showToast(message) {
+            toastMessage.textContent = message;
+            toastNotification.classList.remove('hidden');
+            setTimeout(() => {
+                toastNotification.classList.add('hidden');
+            }, 4000);
+        }
+
+        bookingDateInput.addEventListener('change', function () {
+            const parts = this.value.split('-');
+            if (parts.length !== 3) return;
+
+            const selectedDate = new Date(parts[0], parts[1] - 1, parts[2]);
+            if (isNaN(selectedDate.getTime())) return;
+
+            const dayOfWeek = selectedDate.getDay();
+            bookingTimeSelect.innerHTML = '';
+
+            if (scheduleData[dayOfWeek]) {
+                const config = scheduleData[dayOfWeek];
+                dateFeedback.className = 'text-[11px] block font-medium text-emerald-400 mt-1';
+                dateFeedback.innerHTML = `<i class="fa-solid fa-circle-check"></i> Hari <strong>${config.name}</strong> tersedia (${config.hours}) — ${config.slots.length} pilihan slot waktu`;
+
+                const defaultOpt = document.createElement('option');
+                defaultOpt.value = '';
+                defaultOpt.textContent = `Pilih Jam Sesi (${config.name})`;
+                defaultOpt.disabled = true;
+                defaultOpt.selected = true;
+                bookingTimeSelect.appendChild(defaultOpt);
+
+                config.slots.forEach(slot => {
+                    const opt = document.createElement('option');
+                    opt.value = slot;
+                    opt.textContent = `${slot} WIB`;
+                    bookingTimeSelect.appendChild(opt);
+                });
+                bookingTimeSelect.disabled = false;
+            } else {
+                dateFeedback.className = 'text-[11px] block font-medium text-rose-400 mt-1';
+                dateFeedback.innerHTML = `<i class="fa-solid fa-circle-xmark"></i> Hanya tersedia hari <strong>Senin (13.00-22.00) & Jumat/Sabtu/Minggu (07.00-22.00)</strong>.`;
+                
+                const opt = document.createElement('option');
+                opt.value = '';
+                opt.textContent = 'Jadwal tidak tersedia di hari ini';
+                opt.disabled = true;
+                opt.selected = true;
+                bookingTimeSelect.appendChild(opt);
+                bookingTimeSelect.disabled = true;
+            }
+        });
+
+        directWhatsAppActionBtn.addEventListener('click', function () {
+            const name = document.getElementById('clientName').value.trim();
+            const pkg = document.getElementById('packageSelect').value;
+            const date = document.getElementById('bookingDate').value;
+            const time = document.getElementById('bookingTime').value;
+            const loc = document.getElementById('clientLocation').value.trim();
+            const note = document.getElementById('clientMessage').value.trim();
+
+            if (!name) {
+                showToast('Mohon isi nama lengkap Anda.');
+                document.getElementById('clientName').focus();
+                return;
+            }
+            if (!pkg) {
+                showToast('Silakan pilih paket foto terlebih dahulu.');
+                document.getElementById('packageSelect').focus();
+                return;
+            }
+            if (!date) {
+                showToast('Silakan pilih tanggal sesi foto.');
+                document.getElementById('bookingDate').focus();
+                return;
+            }
+            if (!time) {
+                showToast('Silakan pilih jam sesi foto yang tersedia.');
+                document.getElementById('bookingTime').focus();
+                return;
+            }
+
+            const dateParts = date.split('-');
+            const dateObj = new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
+            const dateFormatted = !isNaN(dateObj.getTime()) 
+                ? dateObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }) 
+                : date;
+
+            let text = `Halo Mas Nabiel, saya ingin reservasi sesi foto:%0A%0A`;
+            text += `👤 *Nama:* ${encodeURIComponent(name)}%0A`;
+            text += `📦 *Paket:* ${encodeURIComponent(pkg)}%0A`;
+            text += `📅 *Tanggal:* ${encodeURIComponent(dateFormatted)}%0A`;
+            text += `⏰ *Jam Sesi:* ${encodeURIComponent(time)} WIB%0A`;
+            text += `📍 *Lokasi:* ${encodeURIComponent(loc || 'Akan didiskusikan')}%0A`;
+            text += `📝 *Konsep/Catatan:* ${encodeURIComponent(note || '-')}%0A%0A`;
+            text += `Mohon info ketersediaan slotnya ya Mas. Terima kasih!`;
+
+            const waUrl = `https://wa.me/${photographer.whatsapp_number}?text=${text}`;
+            window.open(waUrl, '_blank');
+        });
+    </script>
+</body>
+</html>
